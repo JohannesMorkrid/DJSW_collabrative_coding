@@ -1,0 +1,45 @@
+DJSW.eval
+=========
+
+.. py:module:: DJSW.eval
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   DJSW.eval.balanced_accuracy
+   DJSW.eval.evaluate_model
+   DJSW.eval.eval_model
+
+
+Module Contents
+---------------
+
+.. py:function:: balanced_accuracy(y_true, y_pred)
+
+   Calculate balanced accuracy for multi-class classification.
+
+   Balanced accuracy is the average of recall obtained on each class.
+   It's particularly useful for imbalanced datasets.
+
+   Args:
+       y_true: Ground truth labels (1D array-like)
+       y_pred: Predicted labels (1D array-like)
+
+   Returns:
+       float: Balanced accuracy score between 0 and 1
+
+   Raises:
+       AssertionError: If inputs are invalid
+       ValueError: If computation fails
+
+
+.. py:function:: evaluate_model(args)
+
+   Evaluate a WMLP model on test data.
+
+
+.. py:function:: eval_model(args)
+
