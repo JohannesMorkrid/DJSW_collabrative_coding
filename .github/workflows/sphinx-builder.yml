@@ -24,7 +24,6 @@ jobs:
         environment-file: ''
         auto-activate-base: true 
         python-version: '3.12'
-        cache-environment: true
         generate-run-shell: false
 
     - name: Install dependencies
