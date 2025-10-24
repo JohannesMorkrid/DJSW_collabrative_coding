@@ -1,4 +1,4 @@
-# DJSW_collabrative_coding
+# DJSW_collabrative_coding 
 
 [![CCDS Project Template](https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter)](https://cookiecutter-data-science.drivendata.org/)
 [![Documentation Status](https://readthedocs.org/projects/djsw-collabrative-coding/badge/?version=latest)](https://djsw-collabrative-coding.readthedocs.io/en/latest/?badge=latest)
