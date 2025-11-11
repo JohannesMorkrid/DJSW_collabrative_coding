@@ -18,7 +18,7 @@ def test_main():
     4..9 (the project's filtered subset) but you can pass a different set with
     --expect.
     """
-    argv = argv or sys.argv[1:]
+    argv = None or sys.argv[1:]
     import argparse
 
     parser = argparse.ArgumentParser(description="Verify MNIST HDF5 file contents")
