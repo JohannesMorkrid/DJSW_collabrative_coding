@@ -1,0 +1,144 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dennis Documentation &mdash; DJSW Collaborative Coding Template 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            DJSW Collaborative Coding Template
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../WMLP.html">WMLP Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../autoapi/index.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">DJSW Collaborative Coding Template</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Dennis Documentation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/pages/individual_reports/dennis.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="dennis-documentation">
+<h1>Dennis Documentation<a class="headerlink" href="#dennis-documentation" title="Link to this heading"></a></h1>
+<section id="implementation-tasks">
+<h2>Implementation tasks<a class="headerlink" href="#implementation-tasks" title="Link to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Create a MNIST03 dataset h5py file. MNIST03 is a limited MNIST variant including only data for numbers 0-3.</p></li>
+<li><p>Custom dataset loader for MNIST03.</p></li>
+<li><p>MLP with 3 hidden layers, 300 neurons in each layer, LeakyReLU activation function</p></li>
+<li><p>Individual documentation</p></li>
+</ol>
+</section>
+<section id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Link to this heading"></a></h2>
+<section id="creating-the-dataset">
+<h3>Creating the dataset<a class="headerlink" href="#creating-the-dataset" title="Link to this heading"></a></h3>
+<p>Download the original MNIST data files in gzip format</p>
+<ul class="simple">
+<li><p>train-images-idx3-ubyte.gz,</p></li>
+<li><p>train-labels-idx1-ubyte.gz,</p></li>
+<li><p>t10k-images-idx3-ubyte.gz,</p></li>
+<li><p>t10k-labels-idx1-ubyte.gz</p></li>
+</ul>
+<p>download_prepare_mnist03.py opens the .gz data files, the train and test image data and labels</p>
+</section>
+</section>
+<section id="challenges">
+<h2>Challenges<a class="headerlink" href="#challenges" title="Link to this heading"></a></h2>
+<section id="running-another-person-s-code">
+<h3>Running another person’s code<a class="headerlink" href="#running-another-person-s-code" title="Link to this heading"></a></h3>
+</section>
+<section id="another-person-running-my-code">
+<h3>Another person running my code<a class="headerlink" href="#another-person-running-my-code" title="Link to this heading"></a></h3>
+</section>
+</section>
+<section id="tools">
+<h2>Tools<a class="headerlink" href="#tools" title="Link to this heading"></a></h2>
+</section>
+<section id="lumi">
+<h2>LUMI<a class="headerlink" href="#lumi" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Dennis, Johannes Mørkrid, Sigurd and Youssef Wally.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

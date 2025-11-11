@@ -1,0 +1,35 @@
+test_dataset_Sigurd
+===================
+
+.. py:module:: test_dataset_Sigurd
+
+.. autoapi-nested-parse::
+
+   Tiny HDF5 opener for MNIST files.
+
+   This script only opens the given HDF5 file and prints top-level dataset names,
+   their shapes and dtypes. It's intentionally minimal so you can extend it.
+
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   test_dataset_Sigurd.test_main
+
+
+Module Contents
+---------------
+
+.. py:function:: test_main()
+
+   Verify one or more MNIST HDF5 files.
+
+   The script inspects top-level datasets and validates that `images` and
+   `labels` are present. By default it expects labels to be in the set
+   4..9 (the project's filtered subset) but you can pass a different set with
+   --expect.
+
+
