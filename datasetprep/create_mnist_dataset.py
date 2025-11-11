@@ -19,6 +19,42 @@ except Exception:
 
 
 def create_mnist_h5(output_path: str | Path = "data/processed/mnist.h5", train: bool = True, download: bool = True, labels_to_keep: list[int] | None = None):
+    """Create an HDF5 file containing MNIST images and labels.
+
+    Parameters
+    ----------
+    output_path:
+        Path to the output HDF5 file. Parent directories will be created if
+        they do not exist.
+    train:
+        If True, use the MNIST training split; if False, use the test split.
+    download:
+        If True allow torchvision to download MNIST if the raw files are absent.
+    labels_to_keep:
+        Optional list of integer labels to include in the output. If provided,
+        only samples whose labels are in this list are written into the HDF5
+        file. Note that stored labels remain the original MNIST labels (e.g.
+        4..9); any remapping for training should be applied at load time via
+        ``target_transform``.
+
+    Returns
+    -------
+    Path
+        The path to the created HDF5 file.
+
+    Raises
+    ------
+    RuntimeError
+        If torchvision is not available (checked at module import time).
+
+    Notes
+    -----
+    The function writes two datasets to the HDF5 file:
+    - ``images``: uint8 array with shape (N, 28, 28)
+    - ``labels``: uint8 array with shape (N,)
+
+    The datasets use gzip compression to reduce disk usage.
+    """
     output_path = Path(output_path)
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
@@ -62,8 +98,16 @@ if __name__ == "__main__":
     parser.add_argument("--output", "-o", default="data/processed/mnist.h5", help="Output HDF5 path")
     parser.add_argument("--train", action="store_true", help="Download train split (default)")
     parser.add_argument("--test", dest="train", action="store_false", help="Download test split")
+    parser.add_argument("--keep", "--labels-to-keep", dest="labels_to_keep", default=None,
+                        help="Comma-separated list of integer labels to keep (e.g. 4,5,6,7,8,9)."
+                        )
     parser.set_defaults(train=True)
     args = parser.parse_args()
+    # Parse comma-separated labels list into a Python list of ints if provided
+    if args.labels_to_keep is None:
+        labels_to_keep = None
+    else:
+        labels_to_keep = [int(x) for x in args.labels_to_keep.split(",") if x.strip() != ""]
 
-    p = create_mnist_h5(args.output, train=args.train)
+    p = create_mnist_h5(args.output, train=args.train, labels_to_keep=labels_to_keep)
     print(f"Created {p}")

@@ -67,7 +67,7 @@ Efficient Lumi-friendly ML Pipeline
 ## CITATION
 ```bibtex
 @software{DJSW2025,
-  author       = {Dennis and Johannes Mørkrid and Sigurd and Youssef Wally},
+  author       = {Dennis and Johannes Mørkrid and Sigurd Almli Hanssen and Youssef Wally},
   title        = {DJSW Collaborative Coding Template},
   year         = {2025},
   url          = {https://github.com/youssefwally/DJSW_collabrative_coding},
@@ -78,11 +78,10 @@ Efficient Lumi-friendly ML Pipeline
 ```
 ## Results
 | Model | Accuracy | Precision | Recall | Balanced Accuracy | F1 Score |
-|-------|----------|-----------|--------|-------------------|-----------|
-| WMLP | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
-| DMLP | 0.9916 | 0.9916 | 0.9914 | 0.9914 | 0.9915 |
-| Model 3 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
-| Model 4 | 0.00 | 0.00 | 0.00 | 0.00 | 0.00 |
+|-------|----------|-----------|--------|-------------------|----------|
+| WMLP | 0.9466   | 0.9452    | 0.9381 | 0.9381            | 0.9416   |
+| DMLP | 0.9916   | 0.9916    | 0.9914 | 0.9914            | 0.9915   |
+| SMLP | 0.9748   | 0.9750    | 0.9750 | 0.9750            | 0.9750   |
 
 ## Installation
 
