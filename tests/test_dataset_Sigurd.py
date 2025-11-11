@@ -10,7 +10,7 @@ import h5py
 import numpy as np
 
 
-def main(argv=None):
+def test_main():
     """Verify one or more MNIST HDF5 files.
 
     The script inspects top-level datasets and validates that `images` and
@@ -99,5 +99,3 @@ def main(argv=None):
             overall_rc = 9
 
     return overall_rc
-
-main()
