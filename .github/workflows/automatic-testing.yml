@@ -26,7 +26,7 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install -r docs/requirements-docs.txt
+        pip install -r requirements-docs.txt
 
     - name: Run tests
       run: |
